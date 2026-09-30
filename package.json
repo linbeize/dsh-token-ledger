@@ -1,0 +1,26 @@
+{
+  "name": "dsh-plugin-token-ledger",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Per-route (provider/model) token ledger for dsh: a tokenLedger session projection, a /tokens command, and a Session Header panel showing real usage grouped by the model route that billed it.",
+  "main": "index.mjs",
+  "exports": {
+    ".": {
+      "default": "./index.mjs"
+    },
+    "./client": {
+      "default": "./client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  }
+}
